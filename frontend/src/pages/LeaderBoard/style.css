@@ -1,0 +1,215 @@
+#leaderboard {
+  background-image: url('../../images/bricks.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+#leaderboard h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 4rem 4rem 4rem;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;
+}
+
+.leaderboard-score {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px;
+
+}
+
+#leadBrd-table {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 15px;
+  padding-left: 15px;
+  font-weight: bold;
+  text-shadow:
+    0 0 500px #fff,
+    0 0 100px #fff,
+    0 0 40px #4f1471,
+    0 0 80px #4f1471,
+    0 0 90px #4f1471,
+    0 0 100px #4f1471,
+    0 0 15px #4f1471;
+}
+
+.leaderboard-container {
+  background-color: rgba(183, 183, 183, 0.1);
+  backdrop-filter: blur(1px);
+  padding: 50px 100px 0px 100px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  max-height: 800px;
+  overflow: auto;
+
+  font-size: 1.5rem;
+}
+
+#start-again {
+  position: relative;
+  cursor: pointer;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  padding: 1.2rem 3.4rem;
+  font-size: 1rem;
+  background: transparent;
+  border: 2px solid #ffe4f3;
+  border-radius: 1rem;
+  color: #ffeff7;
+  margin-bottom: 15px;
+
+  -webkit-box-shadow: 0px 0px 44px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
+  -moz-box-shadow: 0px 0px 44px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
+  box-shadow: inset 0px 0px 20px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
+  text-shadow: 0 0 0.125em rgba(248, 74, 167, 1);
+}
+
+
+#start-again:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  background-color: #f84aa7;
+  border: 0;
+}
+
+#start-again::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f84aa7;
+  border-radius: 1rem;
+  filter: blur(2em);
+  opacity: 0;
+  transition: opacity linear 0.1s;
+  z-index: -1;
+}
+
+#start-again:hover::after {
+  opacity: 1;
+}
+
+[role=Descending] {
+  margin-right: 15px;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  padding: 10px 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: inline-block;
+  border: 2px solid#0ff;
+  box-shadow: 0 0 5px #0ff, 0 0 5px #0ff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+[role=Descending]:after {
+  position: absolute;
+  width: 10;
+  height: 100%;
+  background: #0ff;
+  box-shadow:
+    0 0 20px #0ff;
+  transition: all 0.3s ease;
+}
+
+[role=Descending]:hover {
+  color: #fff;
+  background-color: rgba(0, 255, 255, 0.743);
+}
+
+[role=Descending]:hover:after {
+  left: 0;
+  width: 50%;
+}
+
+[role=Descending]:active {
+  top: 20px;
+}
+
+[role=Ascending] {
+  margin-right: 15px;
+  color: #fff;
+  width: 200px;
+  height: 40px;
+  padding: 10px 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: inline-block;
+  border: 2px solid#ff9aff;
+  box-shadow: 0 0 5px #ff9aff, 0 0 5px #ff9aff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+[role=Ascending]:after {
+  position: absolute;
+  width: 10;
+  height: 100%;
+  background: #ff9aff;
+  box-shadow:
+    0 0 20px #ff9aff;
+  transition: all 0.3s ease;
+}
+
+[role=Ascending]:hover {
+  color: #fff;
+}
+
+[role=Ascending]:hover:after {
+  left: 0;
+  width: 50%;
+}
+
+[role=Ascending]:active {
+  top: 20px;
+}
+
+#backBtn {
+  cursor: pointer;
+  top: 20px;
+  border: none;
+  position: absolute;
+  background: transparent !important;
+  color: 0, 193, 216;
+  margin-left: 85% !important;
+  font-size: 1.5rem;
+  text-shadow:
+    0 0 500px #fff,
+    0 0 100px #fff,
+    0 0 50px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    sortingTogglepx #0ff;
+}
+
+@media screen and (max-width: 450px) {
+  #leaderboard {
+    background-image: url('../../images/bricks.jpeg');
+  }
+}
